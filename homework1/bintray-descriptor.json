@@ -1,0 +1,25 @@
+{
+	"package": {
+		"name": "hello_world_cli",
+		"repo": "hello_world_cli",
+		"subject": "motoroller95",
+		"vcs_url": "https://github.com/motoroller95/otus-cpp",
+		"licenses": ["MIT"]
+	},
+	"version": {
+		"name": "${PROJECT_VERSION}"
+	},
+	"files": [
+		{
+			"includePattern": "./${CPACK_PACKAGE_FILE_NAME}.deb",
+			"uploadPattern": "${CPACK_PACKAGE_FILE_NAME}.deb",
+			"matrixParams": {
+				"deb_distribution": "stable",
+				"deb_component": "main",
+				"deb_architecture": "amd64"
+			}
+		}
+	],
+	"publish": true,
+	"override": false
+}

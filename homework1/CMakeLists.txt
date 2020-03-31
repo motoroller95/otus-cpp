@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.10)
 
-project(homework1 VERSION 0.0.1$ENV{TRAVIS_BUILD_NUMBER})
+project(homework1 VERSION $ENV{BUILD_VERSION})
 
 SET(HOMEWORK1_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 SET(PROCESSED_HEADERS_DIR ${CMAKE_CURRENT_BINARY_DIR}/include)
@@ -11,9 +11,11 @@ add_subdirectory(src)
 add_subdirectory(tests)
 
 set(CPACK_GENERATOR DEB)
-set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
-set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
-set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
+set(CPACK_PACKAGE_VERSION $ENV{BUILD_VERSION})
+set(CPACK_PACKAGE_NAME hello_world_cli)
+set(CPACK_PACKAGE_FILE_NAME ${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION})
 set(CPACK_PACKAGE_CONTACT motoroller95@gmail.com)
+
+configure_file(bintray-descriptor.json ${CMAKE_BINARY_DIR}/bintray-descriptor.json)
 
 include(CPack)

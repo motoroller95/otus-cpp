@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.10)
 
-project(hello_world_cli VERSION 0.0.1$ENV{TRAVIS_BUILD_NUMBER})
+project(hello_world_cli VERSION $ENV{BUILD_VERSION})
 
 file(GLOB_RECURSE HELLOWORLD_CLI_SRC )
 add_executable(hello_world_cli "main.cpp" "version.cpp")

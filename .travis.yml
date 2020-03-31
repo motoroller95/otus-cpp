@@ -1,38 +1,35 @@
 language: cpp
+compiler: g++
 
-os:
-  - linux
+os: linux
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
 
 matrix:
-  include:
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - llvm-toolchain-trusty-5.0
-          packages:
-            - clang-5.0
-      env:
-        - MATRIX_EVAL="CC=clang-5.0 && CXX=clang++-5.0"
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-7
-      env:
-        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+  fast_finish: true      
 
 git:
   quiet: true
 
-before_install:
-  - eval "${MATRIX_EVAL}"
+before_script:
+  - export RELEASE_VERSION=$(cat RELEASE)
+  - export BUILD_VERSION=$RELEASE_VERSION.$TRAVIS_BUILD_NUMBER
+  - cd $TRAVIS_BUILD_DIR
 
 script:
   - mkdir build && cd build
   - cmake ..
   - cmake --build .
   - ctest
+
+before_deploy:
+  - cd $TRAVIS_BUILD_DIR/build
   - cpack
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - dpl --skip_cleanup --provider=bintray --file=bintray-descriptor.json --user=$BINTRAY_USER --key=$BINTRAY_API_KEY
