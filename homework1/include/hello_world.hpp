@@ -2,5 +2,5 @@
 
 namespace HelloWorld
 {
-  const char* message();
+  void  print();
 }; // namespace HelloWorld
