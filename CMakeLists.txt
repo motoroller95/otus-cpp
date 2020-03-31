@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.12)
 
 project(otus VERSION 0.0.1$ENV{TRAVIS_BUILD_NUMBER})
 

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.12)
 
 project(hello_world_cli VERSION 0.0.1$ENV{TRAVIS_BUILD_NUMBER})
 
@@ -10,3 +10,5 @@ target_include_directories(hello_world_cli PRIVATE ${HOMEWORK1_DIR}/include ${PR
 target_include_directories(hello_world PRIVATE ${HOMEWORK1_DIR}/include)
 
 target_link_libraries(hello_world_cli hello_world)
+
+install(TARGETS hello_world_cli RUNTIME DESTINATION bin)

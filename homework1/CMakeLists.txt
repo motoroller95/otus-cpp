@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.12)
 
 project(homework1 VERSION 0.0.1$ENV{TRAVIS_BUILD_NUMBER})
 
@@ -9,8 +9,6 @@ configure_file(include/version.h.in ${PROCESSED_HEADERS_DIR}/version.h)
 
 add_subdirectory(src)
 add_subdirectory(tests)
-
-install(TARGETS hello_world_cli RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")

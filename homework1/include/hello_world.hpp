@@ -3,4 +3,4 @@
 namespace HelloWorld
 {
   void  print();
-}; // namespace HelloWorld
+} // namespace HelloWorld
