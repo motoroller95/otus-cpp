@@ -8,7 +8,7 @@ addons:
       - ubuntu-toolchain-r-test
 
 matrix:
-  fast_finish: true      
+  fast_finish: true
 
 git:
   quiet: true
@@ -29,7 +29,8 @@ before_deploy:
   - cpack
 
 deploy:
-  provider: script
+  provider: bintray
+  file: ./bintray-descriptor.json
+  user: $BINTRAY_USER
+  key: $BINTRAY_API_KEY
   skip_cleanup: true
-  script:
-    - dpl --skip_cleanup --provider=bintray --file=bintray-descriptor.json --user=$BINTRAY_USER --key=$BINTRAY_API_KEY
