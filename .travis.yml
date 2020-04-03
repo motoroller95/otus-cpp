@@ -16,6 +16,7 @@ git:
 before_script:
   - export RELEASE_VERSION=$(cat RELEASE)
   - export BUILD_VERSION=$RELEASE_VERSION.$TRAVIS_BUILD_NUMBER
+  - echo $BUILD_VERSION
   - cd $TRAVIS_BUILD_DIR
 
 script:
