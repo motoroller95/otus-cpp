@@ -2,9 +2,15 @@ cmake_minimum_required(VERSION 3.10)
 
 project(tests_hw2)
 
-add_executable(tests_hw2 "main_test.cpp")
-
-add_subdirectory(ip_addr)
+add_executable(
+  tests_hw2
+  test_reader.cpp
+  test_filters.cpp
+  test_ip_filter.cpp
+  ip_addr/test_validator.cpp
+  ip_addr/test_ip_addr.cpp
+  ip_addr/test_builder.cpp
+)
 
 target_include_directories(
   tests_hw2
@@ -15,11 +21,10 @@ target_include_directories(
 )
 target_link_libraries(
   tests_hw2
-  PRIVATE tests_ip_addr
+  PRIVATE ip_filter_library
           gtest
           gtest_main
           pthread
-          ip_filter_library
           ${Boost_LIBRARIES}
 )
 

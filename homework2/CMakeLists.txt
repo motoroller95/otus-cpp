@@ -21,6 +21,6 @@ set(CPACK_PACKAGE_NAME ip_filter)
 set(CPACK_PACKAGE_FILE_NAME ${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION})
 set(CPACK_PACKAGE_CONTACT motoroller95@gmail.com)
 
-configure_file(bintray-descriptor.json ${CMAKE_BINARY_DIR}/bintray-descriptor.json)
+configure_file(bintray-descriptor.json ${CMAKE_BINARY_DIR}/homework2/bintray-descriptor.json)
 
 include(CPack)

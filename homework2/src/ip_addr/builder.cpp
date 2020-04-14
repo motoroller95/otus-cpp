@@ -11,12 +11,12 @@ IPAddr build(const std::string &ipAddress)
 {
   std::vector<std::string> octets;
   boost::split(octets, ipAddress, boost::is_any_of("."));
-  if (octets.size() != 4 || !IPFilter::IPAddr::Validator::isValid(octets))
+  if (!IPFilter::IPAddr::Validator::isValid(octets))
   {
     throw IPFilter::IPAddr::InvalidIP();
   }
 
-  std::array<uint8_t, 4> binaryOctets;
+  OctetsContainer binaryOctets;
   std::transform(
     std::begin(octets),
     std::end(octets),

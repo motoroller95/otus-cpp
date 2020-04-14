@@ -1,18 +1,26 @@
 #pragma once
 
 #include <string>
-#include <exception>
 #include <array>
 
 namespace IPFilter::IPAddr
 {
-  class IPAddr
-  {
-    std::array<uint8_t, 4> octets;
-    std::string str;
-  public:
-    IPAddr(const std::array<uint8_t, 4> &, const std::string &);
+using OctetsContainer = std::array<uint8_t, 4>;
 
-    friend std::ostream &operator<<(std::ostream &, const ::IPFilter::IPAddr::IPAddr &);
+class IPAddr
+{
+  OctetsContainer octets;
+  std::string str;
+
+public:
+  IPAddr() {}
+  IPAddr(const OctetsContainer &, const std::string &);
+
+  const OctetsContainer& getOctets() const;
+
+  bool operator==(const IPAddr &) const;
+  bool operator>(const IPAddr &) const;
+
+  friend std::ostream &operator<<(std::ostream &, const IPAddr &);
   };
 } // namespace IPFilter

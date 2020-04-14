@@ -16,6 +16,6 @@ set(CPACK_PACKAGE_NAME hello_world_cli)
 set(CPACK_PACKAGE_FILE_NAME ${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION})
 set(CPACK_PACKAGE_CONTACT motoroller95@gmail.com)
 
-configure_file(bintray-descriptor.json ${CMAKE_BINARY_DIR}/bintray-descriptor.json)
+configure_file(bintray-descriptor.json ${CMAKE_BINARY_DIR}/homework1/bintray-descriptor.json)
 
 include(CPack)

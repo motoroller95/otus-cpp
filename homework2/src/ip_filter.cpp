@@ -1,26 +1,30 @@
 #include "ip_filter.h"
-
-using namespace std;
+#include "ip_addr/builder.h"
+#include "reader.h"
+#include "filters.h"
+#include <algorithm>
 
 namespace IPFilter
 {
-void run(istream &input, ostream &output)
+void output(const std::vector<IPAddr::IPAddr> &, std::ostream &);
+
+void run(std::istream &input, std::ostream &out)
 {
   auto ips = getIPs(input);
-  output << "Hello world\n";
+
+  std::sort(std::begin(ips), std::end(ips), std::greater<IPAddr::IPAddr>());
+  output(ips, out);
+
+  output(filter(ips, 1), out);
+  output(filter(ips, 46, 70), out);
+  output(filter_any(ips, 46), out);
 }
 
-vector<IPAddr::IPAddr> getIPs(istream &input)
+void output(const std::vector<IPAddr::IPAddr> &ips, std::ostream &out)
 {
-  // uint32_t i = 1;
-  vector<IPAddr::IPAddr> result;
-  string line;
-
-  while (getline(input, line))
+  for (auto &ip : ips)
   {
-    vector<string> lineParts;
+    out << ip << std::endl;
   }
-
-  return result;
 }
 } // namespace IPFilter

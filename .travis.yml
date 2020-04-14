@@ -1,9 +1,10 @@
 language: cpp
 compiler: g++
-
+dist: bionic
 os: linux
 addons:
   apt:
+    update: true
     sources:
       - ubuntu-toolchain-r-test
 
@@ -18,6 +19,7 @@ before_script:
   - export BUILD_VERSION=$RELEASE_VERSION.$TRAVIS_BUILD_NUMBER
   - echo $BUILD_VERSION
   - cd $TRAVIS_BUILD_DIR
+  - sudo apt-get install libboost-dev
 
 script:
   - mkdir build && cd build
@@ -30,8 +32,24 @@ before_deploy:
   - cpack
 
 deploy:
-  provider: bintray
-  file: ./bintray-descriptor.json
-  user: $BINTRAY_USER
-  key: $BINTRAY_API_KEY
-  skip_cleanup: true
+  - provider: bintray
+    file: ./homework1/bintray-descriptor.json
+    user: $BINTRAY_USER
+    key: $BINTRAY_API_KEY
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: bintray
+    file: ./homework2/bintray-descriptor.json
+    user: $BINTRAY_USER
+    key: $BINTRAY_API_KEY
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: bintray
+    file: ./homework2/bintray-descriptor.json
+    user: $BINTRAY_USER
+    key: $BINTRAY_API_KEY
+    skip_cleanup: true
+    on:
+      branch: homework2

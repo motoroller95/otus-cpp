@@ -1,7 +1,7 @@
 {
 	"package": {
-		"name": "hello_world_cli",
-		"repo": "hello_world_cli",
+		"name": "ip_filter",
+		"repo": "ip_filter",
 		"subject": "motoroller95",
 		"vcs_url": "https://github.com/motoroller95/otus-cpp",
 		"licenses": ["MIT"]
