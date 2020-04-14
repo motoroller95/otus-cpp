@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.10)
 
 project(hello_world_cli VERSION ${BUILD_VERSION})
 
-file(GLOB_RECURSE HELLOWORLD_CLI_SRC )
 add_executable(hello_world_cli "main.cpp" "version.cpp")
 add_library(hello_world STATIC "hello_world.cpp")
 

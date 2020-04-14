@@ -15,3 +15,4 @@ enable_testing()
 
 add_subdirectory(googletest)
 add_subdirectory(homework1)
+add_subdirectory(homework2)
