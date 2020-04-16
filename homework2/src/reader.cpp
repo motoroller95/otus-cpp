@@ -1,6 +1,7 @@
 #include "reader.h"
 #include "ip_addr/builder.h"
 #include <limits>
+#include <stdexcept>
 #include <boost/algorithm/string.hpp>
 
 namespace IPFilter
@@ -18,7 +19,7 @@ std::vector<IPAddr::IPAddr> getIPs(std::istream &input)
     lineNumber++;
     if (lineNumber == std::numeric_limits<uint32_t>::max())
     {
-      throw "Too much data";
+      throw std::length_error("Too much data");
     }
 
     std::vector<std::string> lineParts;
