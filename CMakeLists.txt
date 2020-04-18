@@ -14,4 +14,35 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 enable_testing()
 
 add_subdirectory(googletest)
-add_subdirectory(homework1)
+
+if(NOT DEFINED ENV{TRAVIS_BRANCH})
+  set(NO_TRAVIS_BRANCH TRUE)
+else()
+  set(NO_TRAVIS_BRANCH FALSE)
+endif()
+
+if("$ENV{TRAVIS_BRANCH}" STREQUAL "master")
+  set(IS_MASTER TRUE)
+else()
+  set(IS_MASTER FALSE)
+endif()
+
+if("$ENV{TRAVIS_BRANCH}" STREQUAL "homework1")
+  set(IS_HW1 TRUE)
+else()
+  set(IS_HW1 FALSE)
+endif()
+
+if("$ENV{TRAVIS_BRANCH}" STREQUAL "homework2")
+  set(IS_HW2 TRUE)
+else()
+  set(IS_HW2 FALSE)
+endif()
+
+if(${NO_TRAVIS_BRANCH} OR ${IS_MASTER} OR ${IS_HW1})
+  add_subdirectory(homework1)
+endif()
+
+if(${NO_TRAVIS_BRANCH} OR ${IS_MASTER} OR ${IS_HW2})
+  add_subdirectory(homework2)
+endif()
