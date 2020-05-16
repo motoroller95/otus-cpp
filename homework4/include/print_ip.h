@@ -26,25 +26,22 @@ template <
   typename T,
   typename std::enable_if<is_iterable<T>::value>::type* = nullptr
 >
-void printIp(const T &ip)
+void printIp(const T &ip, std::ostream& out)
 {
   if (ip.size() == 0)
     return;
+
+  if constexpr (std::is_same<T, std::string>::value) {
+    out << ip;
+    return;
+  }
+
   auto item = ip.begin();
 
-  std::cout << *item;
+  out << *item;
 
   for (++item; item != ip.end(); item++)
-    std::cout << '.' << *item;
-}
-
-/*!
-  \brief Функция печати ip адреса, заданного строкой.
-  \param[in] ip IP адрес.
-*/
-void printIp(const std::string &ip)
-{
-  std::cout << ip;
+    out << '.' << *item;
 }
 
 /*!
@@ -55,7 +52,7 @@ template <
   typename T,
   typename std::enable_if<std::is_integral<T>::value>::type* =nullptr
 >
-void printIp(T ip)
+void printIp(T ip, std::ostream& out)
 {
   typename std::make_unsigned<T>::type unsignedIp = ip;
 
@@ -64,9 +61,9 @@ void printIp(T ip)
     auto b = unsignedIp >> a;
     auto highByte = b & 0xFF;
 
-    std::cout << highByte;
-    std::cout << '.';
+    out << highByte;
+    out << '.';
   }
 
-  std::cout << (unsignedIp & 0xFF);
+  out << (unsignedIp & 0xFF);
 }

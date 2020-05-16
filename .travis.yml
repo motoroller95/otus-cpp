@@ -29,12 +29,11 @@ script:
   - cmake ..
   - cmake --build .
   - ctest --verbose
+  - cpack
+  - cd $TRAVIS_BUILD_DIR/homework4 && doxygen Doxyfile
 
 before_deploy:
-  - cd $TRAVIS_BUILD_DIR/homework4
-  - doxygen Doxyfile
   - cd $TRAVIS_BUILD_DIR/build
-  - cpack
 
 deploy:
   - provider: bintray

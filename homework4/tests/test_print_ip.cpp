@@ -5,125 +5,125 @@
 
 TEST(printIp, unsignedChar)
 {
-  testing::internal::CaptureStdout();
+  std::stringstream out;
 
   unsigned char input = 127;
-  printIp(input);
+  printIp(input, out);
 
-  ASSERT_STREQ(
+  ASSERT_EQ(
     "127", 
-    testing::internal::GetCapturedStdout().c_str()
+    out.str()
   );
 }
 
 TEST(printIp, signedChar)
 {
-  testing::internal::CaptureStdout();
+  std::stringstream out;
 
   char input = -2;
-  printIp(input);
+  printIp(input, out);
 
-  ASSERT_STREQ(
+  ASSERT_EQ(
     "254", 
-    testing::internal::GetCapturedStdout().c_str()
+    out.str()
   );
 }
 
 TEST(printIp, short)
 {
-  testing::internal::CaptureStdout();
+  std::stringstream out;
 
   short input = 0xFF20;
-  printIp(input);
+  printIp(input, out);
 
-  ASSERT_STREQ(
+  ASSERT_EQ(
     "255.32",
-    testing::internal::GetCapturedStdout().c_str() 
+    out.str()
   );
 }
 
 TEST(printIp, int)
 {
-  testing::internal::CaptureStdout();
+  std::stringstream out;
 
   int input = 2130706433;
-  printIp(input);
+  printIp(input, out);
 
-  ASSERT_STREQ(
+  ASSERT_EQ(
     "127.0.0.1", 
-    testing::internal::GetCapturedStdout().c_str()
+    out.str()
   );
 }
 
 TEST(printIp, long)
 {
-  testing::internal::CaptureStdout();
+  std::stringstream out;
 
   long input = 8875824491850138409;
-  printIp(input);
+  printIp(input, out);
 
-  ASSERT_STREQ(
+  ASSERT_EQ(
     "123.45.67.89.101.112.131.41", 
-    testing::internal::GetCapturedStdout().c_str()
+    out.str()
   );
 }
 
 TEST(printIp, string)
 {
-  testing::internal::CaptureStdout();
+  std::stringstream out;
 
-  printIp(std::string("127.255.13.53"));
+  printIp(std::string("127.255.13.53"), out);
 
-  ASSERT_STREQ(
+  ASSERT_EQ(
     "127.255.13.53", 
-    testing::internal::GetCapturedStdout().c_str()
+    out.str()
   );
 }
 
 TEST(printIp, vector4octets)
 {
-  testing::internal::CaptureStdout();
+  std::stringstream out;
 
-  printIp(std::vector{255, 244, 233, 211});
+  printIp(std::vector{255, 244, 233, 211}, out);
 
-  ASSERT_STREQ(
+  ASSERT_EQ(
     "255.244.233.211", 
-    testing::internal::GetCapturedStdout().c_str()
+    out.str()
   );
 }
 
 TEST(printIp, emtpyVector)
 {
-  testing::internal::CaptureStdout();
+  std::stringstream out;
 
-  printIp(std::vector<int>());
+  printIp(std::vector<int>(), out);
 
-  ASSERT_STREQ(
+  ASSERT_EQ(
     "", 
-    testing::internal::GetCapturedStdout().c_str()
+    out.str()
   );
 }
 
 TEST(printIp, emtpy1octet)
 {
-  testing::internal::CaptureStdout();
+  std::stringstream out;
 
-  printIp(std::vector{245});
+  printIp(std::vector{245}, out);
 
-  ASSERT_STREQ(
+  ASSERT_EQ(
     "245", 
-    testing::internal::GetCapturedStdout().c_str()
+    out.str()
   );
 }
 
 TEST(printIp, list)
 {
-  testing::internal::CaptureStdout();
+  std::stringstream out;
 
-  printIp(std::list{1, 2, 3, 4, 5, 6, 7, 8});
+  printIp(std::list{1, 2, 3, 4, 5, 6, 7, 8}, out);
 
-  ASSERT_STREQ(
+  ASSERT_EQ(
     "1.2.3.4.5.6.7.8", 
-    testing::internal::GetCapturedStdout().c_str()
+    out.str()
   );
 }
