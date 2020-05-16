@@ -1,9 +1,0 @@
-digraph "Иерархия классов. Графический вид."
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="true_type",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node0 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="is_iterable\< T, std\l::void_t\< decltype(std\l::declval\< T \>().begin\l()), decltype(std::declval\l\< T \>().end())\> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structis__iterable_3_01_t_00_01std_1_1void__t_3_01decltype_07std_1_1declval_3_01_t_01_4_07_08_8b76ed00160b122caef222407e1b3a0128.html"];
-}
