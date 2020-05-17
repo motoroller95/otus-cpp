@@ -13,25 +13,25 @@ int main (int, char **)
   auto a6 = std::list<int>{255, 255, 255, 0};
   auto a7 = std::string("7.8.9.10");
 
-  printIp(a1);
+  printIp(a1, std::cout);
   std::cout << std::endl;
 
-  printIp(a2);
+  printIp(a2, std::cout);
   std::cout << std::endl;
 
-  printIp(a3);
+  printIp(a3, std::cout);
   std::cout << std::endl;
 
-  printIp(a4);
+  printIp(a4, std::cout);
   std::cout << std::endl;
 
-  printIp(a7);
+  printIp(a7, std::cout);
   std::cout << std::endl;
 
-  printIp(a5);
+  printIp(a5, std::cout);
   std::cout << std::endl;
 
-  printIp(a6);
+  printIp(a6, std::cout);
   std::cout << std::endl;
 
   return 0;

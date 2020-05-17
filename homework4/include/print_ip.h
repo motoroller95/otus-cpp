@@ -2,14 +2,14 @@
 
 /*!
   \file print_ip.h
-  \brief Определения шаблонных функций печати ip адреса.
+  \brief Определения шаблонных функций печати ip адреса
 */
 
 #include <iostream>
 #include <type_traits>
 
 /*!
-  \brief Метафункция, определяющая является ли проверяемый тип котейнером из стандартной библиотеки.
+  \brief Метафункция, определяющая является ли проверяемый тип котейнером из стандартной библиотеки
 */
 template <typename T, typename = void>
 struct is_iterable : std::false_type {};
@@ -19,43 +19,40 @@ struct is_iterable<T, std::void_t<decltype(std::declval<T>().begin()),
   : std::true_type {};
 
 /*!
-  \brief Шаблонная функция печати ip адреса, заданного контейнером из стандартной библиотеки.
-  \param[in] ip IP адрес.
+  \brief Шаблонная функция печати ip адреса, заданного контейнером из стандартной библиотеки
+  \param[in] ip IP адрес
+  \param[in] out Поток вывода
 */
 template <
   typename T,
   typename std::enable_if<is_iterable<T>::value>::type* = nullptr
 >
-void printIp(const T &ip)
+void printIp(const T &ip, std::ostream& out)
 {
   if (ip.size() == 0)
     return;
-  auto item = ip.begin();
 
-  std::cout << *item;
+  if constexpr (std::is_same<T, std::string>::value) {
+    out << ip;
+  } else {
+    auto item = ip.begin();
+    out << *item;
 
-  for (++item; item != ip.end(); item++)
-    std::cout << '.' << *item;
+    for (++item; item != ip.end(); item++)
+      out << '.' << *item;
+  }
 }
 
 /*!
-  \brief Функция печати ip адреса, заданного строкой.
-  \param[in] ip IP адрес.
-*/
-void printIp(const std::string &ip)
-{
-  std::cout << ip;
-}
-
-/*!
-  \brief Шаблонная функция печати ip адреса, заданного любым целочисленным типом.
-  \param[in] ip IP адрес.
+  \brief Шаблонная функция печати ip адреса, заданного любым целочисленным типом
+  \param[in] ip IP адрес
+  \param[in] out Поток вывода
 */
 template <
   typename T,
   typename std::enable_if<std::is_integral<T>::value>::type* =nullptr
 >
-void printIp(T ip)
+void printIp(T ip, std::ostream& out)
 {
   typename std::make_unsigned<T>::type unsignedIp = ip;
 
@@ -64,9 +61,9 @@ void printIp(T ip)
     auto b = unsignedIp >> a;
     auto highByte = b & 0xFF;
 
-    std::cout << highByte;
-    std::cout << '.';
+    out << highByte;
+    out << '.';
   }
 
-  std::cout << (unsignedIp & 0xFF);
+  out << (unsignedIp & 0xFF);
 }
