@@ -33,15 +33,13 @@ void printIp(const T &ip, std::ostream& out)
 
   if constexpr (std::is_same<T, std::string>::value) {
     out << ip;
-    return;
+  } else {
+    auto item = ip.begin();
+    out << *item;
+
+    for (++item; item != ip.end(); item++)
+      out << '.' << *item;
   }
-
-  auto item = ip.begin();
-
-  out << *item;
-
-  for (++item; item != ip.end(); item++)
-    out << '.' << *item;
 }
 
 /*!
