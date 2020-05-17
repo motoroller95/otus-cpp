@@ -2,14 +2,14 @@
 
 /*!
   \file print_ip.h
-  \brief Определения шаблонных функций печати ip адреса.
+  \brief Определения шаблонных функций печати ip адреса
 */
 
 #include <iostream>
 #include <type_traits>
 
 /*!
-  \brief Метафункция, определяющая является ли проверяемый тип котейнером из стандартной библиотеки.
+  \brief Метафункция, определяющая является ли проверяемый тип котейнером из стандартной библиотеки
 */
 template <typename T, typename = void>
 struct is_iterable : std::false_type {};
@@ -19,8 +19,9 @@ struct is_iterable<T, std::void_t<decltype(std::declval<T>().begin()),
   : std::true_type {};
 
 /*!
-  \brief Шаблонная функция печати ip адреса, заданного контейнером из стандартной библиотеки.
-  \param[in] ip IP адрес.
+  \brief Шаблонная функция печати ip адреса, заданного контейнером из стандартной библиотеки
+  \param[in] ip IP адрес
+  \param[in] out Поток вывода
 */
 template <
   typename T,
@@ -43,8 +44,9 @@ void printIp(const T &ip, std::ostream& out)
 }
 
 /*!
-  \brief Шаблонная функция печати ip адреса, заданного любым целочисленным типом.
-  \param[in] ip IP адрес.
+  \brief Шаблонная функция печати ip адреса, заданного любым целочисленным типом
+  \param[in] ip IP адрес
+  \param[in] out Поток вывода
 */
 template <
   typename T,
