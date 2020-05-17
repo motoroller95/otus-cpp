@@ -7,6 +7,9 @@ addons:
     update: true
     sources:
       - ubuntu-toolchain-r-test
+    packages:
+      - graphviz
+      - doxygen
 
 matrix:
   fast_finish: true
@@ -25,31 +28,40 @@ script:
   - mkdir build && cd build
   - cmake ..
   - cmake --build .
-  - ctest
+  - ctest --verbose
 
 before_deploy:
+  - cd $TRAVIS_BUILD_DIR/homework4
+  - doxygen Doxyfile
   - cd $TRAVIS_BUILD_DIR/build
   - cpack
 
 deploy:
   - provider: bintray
-    file: ./homework1/bintray-descriptor.json
+    file: $TRAVIS_BUILD_DIR/build/homework1/bintray-descriptor.json
     user: $BINTRAY_USER
     key: $BINTRAY_API_KEY
     skip_cleanup: true
     on:
       branch: master
   - provider: bintray
-    file: ./homework2/bintray-descriptor.json
+    file: $TRAVIS_BUILD_DIR/build/homework2/bintray-descriptor.json
     user: $BINTRAY_USER
     key: $BINTRAY_API_KEY
     skip_cleanup: true
     on:
       branch: master
   - provider: bintray
-    file: ./homework2/bintray-descriptor.json
+    file: $TRAVIS_BUILD_DIR/build/homework4/bintray-descriptor.json
     user: $BINTRAY_USER
     key: $BINTRAY_API_KEY
     skip_cleanup: true
     on:
-      branch: homework2
+      branch: master
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: $TRAVIS_BUILD_DIR/homework4/docs/html
+    keep_history: true
+    on:
+      branch: master
