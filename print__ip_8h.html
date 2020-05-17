@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Определения шаблонных функций печати ip адреса.  
+<p>Определения шаблонных функций печати ip адреса  
 <a href="#details">Подробнее...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
@@ -79,6 +79,8 @@ $(function() {
 Граф включаемых заголовочных файлов для print_ip.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="print__ip_8h__incl.png" border="0" usemap="#include_2print__ip_8h" alt=""/></div>
+<map name="include_2print__ip_8h" id="include_2print__ip_8h">
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Граф файлов, в которые включается этот файл:</div>
@@ -95,30 +97,27 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Классы</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__iterable.html">is_iterable&lt; T, typename &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метафункция, определяющая является ли проверяемый тип котейнером из стандартной библиотеки.  <a href="structis__iterable.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метафункция, определяющая является ли проверяемый тип котейнером из стандартной библиотеки  <a href="structis__iterable.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__iterable_3_01_t_00_01std_1_1void__t_3_01decltype_07std_1_1declval_3_01_t_01_4_07_08_8b76ed00160b122caef222407e1b3a0128.html">is_iterable&lt; T, std::void_t&lt; decltype(std::declval&lt; T &gt;().begin()), decltype(std::declval&lt; T &gt;().end())&gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a6ec204afabec489e71615276c5d1a166"><td class="memTemplParams" colspan="2">template&lt;typename T , typename std::enable_if&lt; is_iterable&lt; T &gt;::value &gt;::type *  = nullptr&gt; </td></tr>
-<tr class="memitem:a6ec204afabec489e71615276c5d1a166"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a6ec204afabec489e71615276c5d1a166">printIp</a> (const T &amp;ip)</td></tr>
-<tr class="memdesc:a6ec204afabec489e71615276c5d1a166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная функция печати ip адреса, заданного контейнером из стандартной библиотеки.  <a href="#a6ec204afabec489e71615276c5d1a166">Подробнее...</a><br /></td></tr>
-<tr class="separator:a6ec204afabec489e71615276c5d1a166"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab297d710711ede058c28aed17e0e662c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#ab297d710711ede058c28aed17e0e662c">printIp</a> (const std::string &amp;ip)</td></tr>
-<tr class="memdesc:ab297d710711ede058c28aed17e0e662c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция печати ip адреса, заданного строкой.  <a href="#ab297d710711ede058c28aed17e0e662c">Подробнее...</a><br /></td></tr>
-<tr class="separator:ab297d710711ede058c28aed17e0e662c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd40fa13ec31e131702c057e4b0a0f4e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename std::enable_if&lt; std::is_integral&lt; T &gt;::value &gt;::type *  = nullptr&gt; </td></tr>
-<tr class="memitem:abd40fa13ec31e131702c057e4b0a0f4e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#abd40fa13ec31e131702c057e4b0a0f4e">printIp</a> (T ip)</td></tr>
-<tr class="memdesc:abd40fa13ec31e131702c057e4b0a0f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная функция печати ip адреса, заданного любым целочисленным типом.  <a href="#abd40fa13ec31e131702c057e4b0a0f4e">Подробнее...</a><br /></td></tr>
-<tr class="separator:abd40fa13ec31e131702c057e4b0a0f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82457f582f47114a6bc5d2804d4a38ed"><td class="memTemplParams" colspan="2">template&lt;typename T , typename std::enable_if&lt; is_iterable&lt; T &gt;::value &gt;::type *  = nullptr&gt; </td></tr>
+<tr class="memitem:a82457f582f47114a6bc5d2804d4a38ed"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a82457f582f47114a6bc5d2804d4a38ed">printIp</a> (const T &amp;ip, std::ostream &amp;out)</td></tr>
+<tr class="memdesc:a82457f582f47114a6bc5d2804d4a38ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная функция печати ip адреса, заданного контейнером из стандартной библиотеки  <a href="#a82457f582f47114a6bc5d2804d4a38ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:a82457f582f47114a6bc5d2804d4a38ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1feaabc645891ab27a754b34b5f71474"><td class="memTemplParams" colspan="2">template&lt;typename T , typename std::enable_if&lt; std::is_integral&lt; T &gt;::value &gt;::type *  = nullptr&gt; </td></tr>
+<tr class="memitem:a1feaabc645891ab27a754b34b5f71474"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a1feaabc645891ab27a754b34b5f71474">printIp</a> (T ip, std::ostream &amp;out)</td></tr>
+<tr class="memdesc:a1feaabc645891ab27a754b34b5f71474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная функция печати ip адреса, заданного любым целочисленным типом  <a href="#a1feaabc645891ab27a754b34b5f71474">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1feaabc645891ab27a754b34b5f71474"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Определения шаблонных функций печати ip адреса. </p>
+<div class="textblock"><p>Определения шаблонных функций печати ip адреса </p>
 </div><h2 class="groupheader">Функции</h2>
-<a id="a6ec204afabec489e71615276c5d1a166"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ec204afabec489e71615276c5d1a166">&#9670;&nbsp;</a></span>printIp() <span class="overload">[1/3]</span></h2>
+<a id="a82457f582f47114a6bc5d2804d4a38ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82457f582f47114a6bc5d2804d4a38ed">&#9670;&nbsp;</a></span>printIp() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -129,50 +128,35 @@ template&lt;typename T , typename std::enable_if&lt; is_iterable&lt; T &gt;::val
           <td class="memname">void printIp </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>ip</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"><em>ip</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Шаблонная функция печати ip адреса, заданного контейнером из стандартной библиотеки. </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ip</td><td>IP адрес. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab297d710711ede058c28aed17e0e662c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab297d710711ede058c28aed17e0e662c">&#9670;&nbsp;</a></span>printIp() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void printIp </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>ip</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Функция печати ip адреса, заданного строкой. </p>
+<p>Шаблонная функция печати ip адреса, заданного контейнером из стандартной библиотеки </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ip</td><td>IP адрес. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ip</td><td>IP адрес </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">out</td><td>Поток вывода </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="abd40fa13ec31e131702c057e4b0a0f4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd40fa13ec31e131702c057e4b0a0f4e">&#9670;&nbsp;</a></span>printIp() <span class="overload">[3/3]</span></h2>
+<a id="a1feaabc645891ab27a754b34b5f71474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1feaabc645891ab27a754b34b5f71474">&#9670;&nbsp;</a></span>printIp() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,16 +167,27 @@ template&lt;typename T , typename std::enable_if&lt; std::is_integral&lt; T &gt;
           <td class="memname">void printIp </td>
           <td>(</td>
           <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>ip</em></td><td>)</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Шаблонная функция печати ip адреса, заданного любым целочисленным типом. </p>
+<p>Шаблонная функция печати ip адреса, заданного любым целочисленным типом </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ip</td><td>IP адрес. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ip</td><td>IP адрес </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">out</td><td>Поток вывода </td></tr>
   </table>
   </dd>
 </dl>
