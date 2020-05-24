@@ -1,0 +1,12 @@
+<map id="include/document_format/iformat.h" name="include/document_format/iformat.h">
+<area shape="rect" id="node2" href="$current__document_8h.html" title="include/current_document.h" alt="" coords="5,363,208,389"/>
+<area shape="rect" id="node5" href="$jpeg_8h.html" title="include/document_format\l/jpeg.h" alt="" coords="409,95,599,136"/>
+<area shape="rect" id="node11" href="$png_8h.html" title="include/document_format\l/png.h" alt="" coords="196,95,385,136"/>
+<area shape="rect" id="node3" href="$common_8cpp.html" title="src/common.cpp" alt="" coords="70,437,199,464"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="237,437,342,464"/>
+<area shape="rect" id="node6" href="$empty_8h.html" title="include/document_builder\l/empty.h" alt="" coords="409,273,599,315"/>
+<area shape="rect" id="node8" href="$ibuilder_8h.html" title="include/document_builder\l/ibuilder.h" alt="" coords="409,184,599,225"/>
+<area shape="rect" id="node10" href="$resolver_8h.html" title="include/document_format\l/resolver.h" alt="" coords="144,184,333,225"/>
+<area shape="rect" id="node7" href="$common_8h.html" title="include/common.h" alt="" coords="233,363,375,389"/>
+<area shape="rect" id="node9" href="$from__file_8h.html" title="include/document_builder\l/from_file.h" alt="" coords="194,273,385,315"/>
+</map>

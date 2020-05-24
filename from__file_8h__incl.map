@@ -1,0 +1,13 @@
+<map id="include/document_builder/from_file.h" name="include/document_builder/from_file.h">
+<area shape="rect" id="node2" href="$ibuilder_8h.html" title="document_builder/ibuilder.h" alt="" coords="97,95,300,121"/>
+<area shape="rect" id="node11" href="$ihandler_8h.html" title="document_format/handler\l/ihandler.h" alt="" coords="343,333,534,375"/>
+<area shape="rect" id="node15" href="$resolver_8h.html" title="document_format/resolver.h" alt="" coords="377,95,583,121"/>
+<area shape="rect" id="node3" href="$document_8h.html" title="document.h" alt="" coords="243,423,341,449"/>
+<area shape="rect" id="node9" href="$jpeg_8h.html" title="document_format/jpeg.h" alt="" coords="183,169,366,196"/>
+<area shape="rect" id="node13" href="$png_8h.html" title="document_format/png.h" alt="" coords="391,169,569,196"/>
+<area shape="rect" id="node4" href="$iprimitive_8h.html" title="graphical_primitive\l/iprimitive.h" alt="" coords="163,587,311,628"/>
+<area shape="rect" id="node5" href="$circle_8h.html" title="graphical_primitive\l/circle.h" alt="" coords="107,497,255,539"/>
+<area shape="rect" id="node10" href="$iformat_8h.html" title="document_format/iformat.h" alt="" coords="183,251,385,278"/>
+<area shape="rect" id="node12" href="$handler_2jpeg_8h.html" title="document_format/handler\l/jpeg.h" alt="" coords="410,244,601,285"/>
+<area shape="rect" id="node14" href="$handler_2png_8h.html" title="document_format/handler\l/png.h" alt="" coords="677,244,867,285"/>
+</map>

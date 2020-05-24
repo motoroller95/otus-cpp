@@ -1,0 +1,20 @@
+<map id="include/graphical_primitive/iprimitive.h" name="include/graphical_primitive/iprimitive.h">
+<area shape="rect" id="node2" href="$document_8h.html" title="include/document.h" alt="" coords="434,191,585,218"/>
+<area shape="rect" id="node17" href="$circle_8h.html" title="include/graphical_primitive\l/circle.h" alt="" coords="639,95,838,136"/>
+<area shape="rect" id="node18" href="$line_8h.html" title="include/graphical_primitive\l/line.h" alt="" coords="665,720,863,761"/>
+<area shape="rect" id="node19" href="$rectangle_8h.html" title="include/graphical_primitive\l/rectangle.h" alt="" coords="987,184,1186,225"/>
+<area shape="rect" id="node3" href="$empty_8h.html" title="include/document_builder\l/empty.h" alt="" coords="105,631,295,672"/>
+<area shape="rect" id="node7" href="$current__document_8h.html" title="include/current_document.h" alt="" coords="635,549,837,575"/>
+<area shape="rect" id="node8" href="$ibuilder_8h.html" title="include/document_builder\l/ibuilder.h" alt="" coords="105,541,295,583"/>
+<area shape="rect" id="node10" href="$ihandler_8h.html" title="include/document_format\l/handler/ihandler.h" alt="" coords="388,273,577,315"/>
+<area shape="rect" id="node15" href="$handler_2jpeg_8h.html" title="include/document_format\l/handler/jpeg.h" alt="" coords="93,363,283,404"/>
+<area shape="rect" id="node16" href="$handler_2png_8h.html" title="include/document_format\l/handler/png.h" alt="" coords="520,363,709,404"/>
+<area shape="rect" id="node4" href="$common_8h.html" title="include/common.h" alt="" coords="421,727,563,754"/>
+<area shape="rect" id="node5" href="$common_8cpp.html" title="src/common.cpp" alt="" coords="563,809,693,836"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="847,809,953,836"/>
+<area shape="rect" id="node9" href="$from__file_8h.html" title="include/document_builder\l/from_file.h" alt="" coords="383,631,574,672"/>
+<area shape="rect" id="node11" href="$iformat_8h.html" title="include/document_format\l/iformat.h" alt="" coords="307,363,496,404"/>
+<area shape="rect" id="node12" href="$jpeg_8h.html" title="include/document_format\l/jpeg.h" alt="" coords="105,452,295,493"/>
+<area shape="rect" id="node14" href="$png_8h.html" title="include/document_format\l/png.h" alt="" coords="319,452,508,493"/>
+<area shape="rect" id="node13" href="$resolver_8h.html" title="include/document_format\l/resolver.h" alt="" coords="371,541,560,583"/>
+</map>
