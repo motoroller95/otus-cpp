@@ -1,4 +1,4 @@
 <map id="DocumentFormat::Handler::IHandler" name="DocumentFormat::Handler::IHandler">
-<area shape="rect" id="node2" href="$struct_document_format_1_1_handler_1_1_j_p_e_g.html" title="DocumentFormat::Handler\l::JPEG" alt="" coords="5,95,200,136"/>
-<area shape="rect" id="node3" href="$struct_document_format_1_1_handler_1_1_p_n_g.html" title="DocumentFormat::Handler::PNG" alt="" coords="225,102,455,129"/>
+<area shape="rect" id="node2" href="$struct_document_format_1_1_handler_1_1_j_p_e_g.html" title="{DocumentFormat::Handler\l::JPEG\n||+ export_document()\l+ import_document()\l}" alt="" coords="5,160,200,267"/>
+<area shape="rect" id="node3" href="$struct_document_format_1_1_handler_1_1_p_n_g.html" title="{DocumentFormat::Handler::PNG\n||+ export_document()\l+ import_document()\l}" alt="" coords="225,167,455,259"/>
 </map>

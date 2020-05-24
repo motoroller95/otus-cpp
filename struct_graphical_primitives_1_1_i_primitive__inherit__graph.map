@@ -1,5 +1,5 @@
 <map id="GraphicalPrimitives::IPrimitive" name="GraphicalPrimitives::IPrimitive">
-<area shape="rect" id="node2" href="$struct_graphical_primitives_1_1_circle.html" title="GraphicalPrimitives\l::Circle" alt="" coords="204,5,355,47"/>
-<area shape="rect" id="node3" href="$struct_graphical_primitives_1_1_line.html" title="GraphicalPrimitives\l::Line" alt="" coords="204,71,355,112"/>
-<area shape="rect" id="node4" href="$struct_graphical_primitives_1_1_rectangle.html" title="GraphicalPrimitives\l::Rectangle" alt="" coords="204,136,355,177"/>
+<area shape="rect" id="node2" href="$struct_graphical_primitives_1_1_circle.html" title="{GraphicalPrimitives\l::Circle\n||+ name()\l}" alt="" coords="5,145,156,237"/>
+<area shape="rect" id="node3" href="$struct_graphical_primitives_1_1_line.html" title="{GraphicalPrimitives\l::Line\n||+ name()\l}" alt="" coords="180,145,331,237"/>
+<area shape="rect" id="node4" href="$struct_graphical_primitives_1_1_rectangle.html" title="{GraphicalPrimitives\l::Rectangle\n||+ name()\l}" alt="" coords="355,145,505,237"/>
 </map>
