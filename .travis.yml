@@ -30,7 +30,7 @@ script:
   - cmake --build .
   - ctest --verbose
   - cpack
-  - cd $TRAVIS_BUILD_DIR/homework4 && doxygen Doxyfile
+  - cd $TRAVIS_BUILD_DIR/homework5 && doxygen Doxyfile
 
 before_deploy:
   - cd $TRAVIS_BUILD_DIR/build
@@ -57,10 +57,17 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
+  - provider: bintray
+    file: $TRAVIS_BUILD_DIR/build/homework5/bintray-descriptor.json
+    user: $BINTRAY_USER
+    key: $BINTRAY_API_KEY
+    skip_cleanup: true
+    on:
+      branch: homework5
   - provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
-    local_dir: $TRAVIS_BUILD_DIR/homework4/docs/html
+    local_dir: $TRAVIS_BUILD_DIR/homework5/docs/html
     keep_history: true
     on:
-      branch: master
+      branch: homework5

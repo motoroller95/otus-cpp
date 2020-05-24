@@ -45,6 +45,13 @@ else()
   set(IS_HW4 FALSE)
 endif()
 
+if("$ENV{TRAVIS_BRANCH}" STREQUAL "homework5")
+  set(IS_HW5 TRUE)
+else()
+  set(IS_HW5 FALSE)
+endif()
+
+
 if(${NO_TRAVIS_BRANCH} OR ${IS_MASTER} OR ${IS_HW1})
   add_subdirectory(homework1)
 endif()
@@ -55,4 +62,8 @@ endif()
 
 if(${NO_TRAVIS_BRANCH} OR ${IS_MASTER} OR ${IS_HW4})
   add_subdirectory(homework4)
+endif()
+
+if(${NO_TRAVIS_BRANCH} OR ${IS_MASTER} OR ${IS_HW5})
+  add_subdirectory(homework5)
 endif()
